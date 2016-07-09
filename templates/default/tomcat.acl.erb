@@ -1,0 +1,7 @@
+acl = {
+        {
+            communities = public
+            access = read-only
+            managers = 127.0.0.1<% if node['snmpd']['manage_ip'] != "" %>,<%= node['snmpd']['manage_ip'] %><% end %>
+        }
+    }
